@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
+const size = { width: 1200, height: 630 } as const;
+const contentType = 'image/png';
 
 export async function GET(req: Request) {
   try {
