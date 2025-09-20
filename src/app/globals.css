@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f17;
+  --surface: #121826;
+  --primary: #7c5cff;
+  --accent: #00e0ff;
+  --text: #e6e8ef;
+  --muted: #9aa4b2;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,0.08), transparent),
+              radial-gradient(800px 400px at 10% 110%, rgba(0,224,255,0.08), transparent),
+              var(--bg);
+  color: var(--text);
+  font-feature-settings: "ss01" on, "cv01" on;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6;
+}
+
+.card {
+  @apply bg-surface/80 backdrop-blur border border-white/5 rounded-2xl shadow-glow;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-xl bg-primary text-white px-5 py-3 font-medium shadow-glow hover:opacity-95 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 font-medium hover:bg-white/[0.08] transition;
+}
+
+.chip {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1 text-xs text-[color:var(--muted)];
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  @apply bg-white/[0.04] border border-white/10 backdrop-blur;
+}
+
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.section-title {
+  @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+}
