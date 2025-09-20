@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     siteName: 'Space Kings',
     title: 'Space Kings — Esports',
     description: 'Organización de esports enfocada en Counter-Strike 2 en LATAM.',
-    images: [{ url: `${BASE}/logo.png`, alt: 'Space Kings' }]
+    images: [{ url: `${BASE}/og-static`, alt: 'Space Kings — Esports OG' }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Space Kings — Esports',
     description: 'Organización de esports enfocada en Counter-Strike 2 en LATAM.',
-    images: [`${BASE}/logo.png`]
+    images: [`${BASE}/og-static`]
   },
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
   manifest: '/manifest.webmanifest'
