@@ -25,7 +25,7 @@ export default function Hero() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 {true ? (
-                  <Logo width={160} className="mx-auto mb-4 drop-shadow-lg" priority />
+                  <Logo width={160} className="mx-auto mb-4 drop-shadow-lg" priority alt="Space Kings logo" />
                 ) : (
                   <div className="mx-auto mb-4 size-24 rounded-2xl bg-primary/20 border border-primary/30 shadow-glow" />
                 )}
