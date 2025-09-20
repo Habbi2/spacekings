@@ -58,6 +58,8 @@ export async function GET(req: Request) {
       size
     );
   } catch (e) {
-    return new Response('OG image generation failed', { status: 500 });
+    const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://spacekings.vercel.app';
+    // Fallback: redirect to a static image that always exists
+    return Response.redirect(`${base}/logo.png`, 307);
   }
 }
