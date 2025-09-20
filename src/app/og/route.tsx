@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+export const runtime = 'edge';
 
 const size = { width: 1200, height: 630 } as const;
 const contentType = 'image/png';
@@ -60,6 +61,9 @@ export async function GET(req: Request) {
   } catch (e) {
     const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://spacekings.vercel.app';
     // Fallback: redirect to a static image that always exists
-    return Response.redirect(`${base}/logo.png`, 307);
+    return new Response(null, {
+      status: 307,
+      headers: { Location: new URL('/logo.png', base).toString() }
+    });
   }
 }
