@@ -5,8 +5,7 @@ export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
     const title = searchParams.get('title') || 'Space Kings — Esports';
     const subtitle = searchParams.get('subtitle') || 'Counter‑Strike 2 • LATAM';
-    const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://spacekings.vercel.app';
-    const logo = `${base}/logo.png`;
+  // Avoid external fetches (can fail on some deployments/scrapers). Render a vector-style badge instead.
 
     return new ImageResponse(
       (
@@ -26,14 +25,29 @@ export async function GET(req: Request) {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={logo}
-              alt="Space Kings logo"
-              width={128}
-              height={128}
-              style={{ borderRadius: 24, boxShadow: '0 8px 60px rgba(124,92,255,0.35)' }}
-            />
+            {/* Vector badge instead of external image */}
+            <div
+              style={{
+                width: 128,
+                height: 128,
+                borderRadius: 28,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background:
+                  'conic-gradient(from 180deg at 50% 50%, rgba(124,92,255,0.9), rgba(0,224,255,0.8))',
+                boxShadow: '0 10px 60px rgba(124,92,255,0.45)'
+              }}
+            >
+              <div style={{
+                background: 'rgba(0,0,0,0.25)',
+                padding: '6px 14px',
+                borderRadius: 14,
+                border: '2px solid rgba(255,255,255,0.25)'
+              }}>
+                <span style={{ fontSize: 48, fontWeight: 900, letterSpacing: 2 }}>SK</span>
+              </div>
+            </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: 56, fontWeight: 800, lineHeight: 1.1 }}> {title} </div>
               <div style={{ marginTop: 8, fontSize: 28, color: 'rgba(255,255,255,0.7)' }}>{subtitle}</div>
