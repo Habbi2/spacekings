@@ -9,7 +9,7 @@ export const socials = {
   twitter: 'https://x.com/Space_Kings_',
   instagram: 'https://www.instagram.com/spacekingsteam/',
   youtube: 'https://www.youtube.com/channel/UCNBjYdUSiUOIlbfIO7LsBow',
-  twitch: 'https://www.twitch.tv/spacekings',
+  twitch: 'https://www.twitch.tv/space_kings_',
   gmail: 'mailto:spacekingsteam@gmail.com',
   discord: 'https://discord.gg/Rmy7UR5zqg'
 };
