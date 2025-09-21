@@ -16,7 +16,7 @@ export async function GET() {
             justifyContent: 'center',
             padding: 64,
             backgroundColor: '#0b1220',
-            color: 'white',
+            color: '#ffffff',
             fontFamily: 'sans-serif'
           }}
         >
@@ -25,21 +25,22 @@ export async function GET() {
               style={{
                 width: 128,
                 height: 128,
-                borderRadius: 28,
+                borderRadius: 24,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: '#7C5CFF'
               }}
             >
-              <div style={{
-                backgroundColor: 'rgba(0,0,0,0.25)',
-                padding: '6px 14px',
-                borderRadius: 14,
-                border: '2px solid rgba(255,255,255,0.25)'
-              }}>
-                <span style={{ fontSize: 48, fontWeight: 800 }}>SK</span>
-              </div>
+              <span
+                style={{
+                  fontSize: 56,
+                  fontWeight: 800,
+                  color: '#ffffff'
+                }}
+              >
+                SK
+              </span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 24 }}>
               <div style={{ fontSize: 56, fontWeight: 800 }}>Space Kings — Esports</div>

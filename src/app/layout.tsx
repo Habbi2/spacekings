@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navbar from '@/components/ui/Navbar';
 import BackgroundGlow from '@/components/ui/BackgroundGlow';
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   },
   description: 'Organización de esports enfocada en Counter-Strike 2. Tryouts y competiciones en LATAM.',
   keywords: ['Space Kings','esports','Counter-Strike 2','CS2','LATAM','equipo','tryouts','competitivo'],
-  themeColor: '#0b1220',
   robots: {
     index: true,
     follow: true,
@@ -43,6 +42,10 @@ export const metadata: Metadata = {
   },
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
   manifest: '/manifest.webmanifest'
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0b1220'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
