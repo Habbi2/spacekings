@@ -81,7 +81,7 @@ export default function Tryouts() {
               <input
                 required
                 name="discord"
-                placeholder="tuusuario (Discord)"
+                placeholder="tu usuario (Discord)"
                 className="rounded-xl bg-white/[0.04] border border-white/10 px-4 py-3 outline-none focus:border-primary"
               />
             </label>
